@@ -3,14 +3,16 @@ import './Product.module.css';
 
 const product = (props) => {
 	return (
-		<div className="product">
-			<p>Name: {props.name}</p>
-			<p>Brand: {props.brand} </p>
-			<p>Type: {props.type} </p>
-			<p>Price: {props.price} </p>
-			<p>Size: {props.size} </p>
-			<p>Date Opened: {props.date_opened} </p>
-		</div>
+		
+			<tr>
+				<td>{props.name}</td>
+				<td>{props.brand} </td>
+				<td>{props.type} </td>
+				<td>{props.price} </td>
+				<td>{props.size} </td>
+				<td>{props.date_opened} </td>
+			</tr>
+		
 	)
 }
 

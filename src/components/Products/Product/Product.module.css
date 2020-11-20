@@ -3,3 +3,7 @@
 	border: 2px solid #ff0080;
 	display: inline-block;
 }
+
+.td {
+	text-align:center;
+}

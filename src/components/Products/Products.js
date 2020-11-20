@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-//import classes from './Products.module.css';
 import Product from './Product/Product';
+import classes from './Products.module.css';
+
 
 class Products extends Component {
 	state = {
@@ -13,23 +14,32 @@ class Products extends Component {
 	}
 	render () {
 		return (
-    <div>
-			<p>This is my beauty app</p>
-			{this.state.products.map((product) => 
-				<div>
-					<Product 
-						key={product.id} 
-						name={product.name} 
-						brand={product.brand}
-						type={product.type}
-						size={product.size}
-						date_opened={product.date_opened}
-					/>
-				</div>
-			)};
-			<div>Here in products</div>
-    </div>
-  );
+			<div className={classes.Products}>
+				<table>
+					<thead>
+						<th>Product</th>
+						<th>Brand</th>
+						<th>Type</th>
+						<th>Size</th>
+						<th>Date Opened</th>
+					</thead>
+					<tbody>
+						{this.state.products.map((product, id) => {
+							return (
+								<Product 
+									key={product.id} 
+									name={product.name} 
+									brand={product.brand}
+									type={product.type}
+									size={product.size}
+									date_opened={product.date_opened}
+								/>
+							)
+						})}
+					</tbody>
+				</table>
+			</div>
+		);
 	}
 }
 
