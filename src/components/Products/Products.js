@@ -27,6 +27,7 @@ class Products extends Component {
 					/>
 				</div>
 			)};
+			<div>Here in products</div>
     </div>
   );
 	}
