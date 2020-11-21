@@ -4,11 +4,11 @@ import './Product.module.css';
 const product = (props) => {
 	return (
 		
-			<tr>
+			<tr key={props.id}>
 				<td>{props.name}</td>
 				<td>{props.brand} </td>
-				<td>{props.type} </td>
 				<td>{props.price} </td>
+				<td>{props.type} </td>
 				<td>{props.size} </td>
 				<td>{props.date_opened} </td>
 			</tr>

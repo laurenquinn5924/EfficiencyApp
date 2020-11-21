@@ -17,19 +17,23 @@ class Products extends Component {
 			<div className={classes.Products}>
 				<table>
 					<thead>
-						<th>Product</th>
-						<th>Brand</th>
-						<th>Type</th>
-						<th>Size</th>
-						<th>Date Opened</th>
+						<tr>
+							<th>Product</th>
+							<th>Brand</th>
+							<th>Price</th>
+							<th>Type</th>
+							<th>Size</th>
+							<th>Date Opened</th>
+						</tr>
 					</thead>
 					<tbody>
-						{this.state.products.map((product, id) => {
+						{this.state.products.map((product) => {
 							return (
 								<Product 
 									key={product.id} 
 									name={product.name} 
 									brand={product.brand}
+									price={product.price}
 									type={product.type}
 									size={product.size}
 									date_opened={product.date_opened}
